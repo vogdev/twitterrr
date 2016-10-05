@@ -15,3 +15,24 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).ready(function(){
+/******************/
+var maxCharacters = 140;
+$('#count').text(maxCharacters);
+  $(".tweetinput").keyup(function(){
+    var count = $('#count');
+    var characters = (this.value.length);
+        if (characters > maxCharacters -11) {
+        count.addClass('over');
+    } else {
+        count.removeClass('over');
+    }
+    count.text(maxCharacters - characters);
+  });
+
+/******************/
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+/******************/
+});

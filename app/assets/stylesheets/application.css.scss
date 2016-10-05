@@ -14,3 +14,118 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
+
+
+body {
+    background-color: #f5f8fa;
+}
+.fa-2x {
+    font-size: 1.5em;
+}
+.navbar-default .navbar-nav .activetag {
+    color: #cc3366;
+    background-color: transparent;
+    border-bottom: 5px solid #CC3366;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #66757f;
+    height: 58px;
+}
+.navbar{
+    background-color: #FFF;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    border-radius: 0px;
+}
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #CC3366;
+    background-color: transparent;
+
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #c36;
+    background-color: transparent;
+    border-bottom: 5px solid #CC3366;
+    transition: all .15s cubic-bezier(0.53, 0.03, 0.2, 1);
+}
+.tweet-btn, .tweet-btn:focus, .tweet-btn:hover {
+    background-color: #CC3366;
+    background: rgba(204,51,102,.8);
+    color: #FFF;
+
+}
+
+.active-nav {
+    border-bottom: 5px solid #CC3366;
+}
+.highlighted {
+    color: #cc3366;
+}
+.panel-body {
+    padding: 10px;
+}
+.post-panel {
+    margin-bottom: -2px;
+}
+.post-title {
+    margin-left: 15px;
+}
+.post-content {
+    text-align: center;
+}
+.post-owner {
+    color: #000000;
+    font-weight: bold;
+}
+.post-date {
+    opacity: 0.7;
+}
+.post-links {
+    text-align: left;
+    margin-left: 15px;
+}
+.g-links {
+    color: #aab8c2;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 50px;
+}
+.g-links:hover {
+    font-size: 16px;
+    color: #cc3366;
+}
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    position: absolute;
+    left: 48%;
+    cursor: pointer;
+    top: -8px;
+    }
+.over {
+    color: red;
+}
+.counter {
+    float: right;
+    margin: 15px 5px 0 0;
+}
+.submit-tweet {
+    float: right;
+}
+.tweet-panel {
+    background-color: rgba(214, 91, 132, 0.11);
+}
+.form-control:focus {
+    border-color: #d35680;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(242, 231, 237);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(242, 231, 237);
+}
+@media (min-width: 768px){
+
+}
+@media (max-width: 768px){
+/*Small*/
+    .hiss {
+        display: none;
+    }
+}

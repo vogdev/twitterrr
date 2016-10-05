@@ -1,6 +1,6 @@
 <div class="row">
   
-  <div class="col-xs-3">
+  <div class="col-sm-12 col-md-3 col-lg-3">
     <div class="panel panel-default">
       <div class="panel-body">
         Basic panel example
@@ -22,13 +22,36 @@
     </div>
   </div>
   
-  <div class="col-xs-6">
+  <div class="col-sm-12 col-md-6 col-lg-6">
+  <%= render '/components/post_form' %>
     <%for @p in @posts %>
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <p><%= @p.content %></p>
+
+      <div class="panel panel-default post-panel">
+        <div class="panel-body row">
+          
+          <div class="col-xs-1"><image src="/avatar.png" style=" border-radius: 5px; width:50px; height:50px; width:50px; height:50px;"></image></div>
+          <div class="col-xs-11">
+            <p class="post-title">
+              <span class="post-owner">
+                <%= User.find(@p.user_id).username %>
+              </span>
+                - 
+              <span class="post-date">
+                <%= @p.created_at.to_formatted_s(:time) %>
+              </span>
+            </p>
+            <p class="post-content"><%= @p.content %></p>
+            </div>
+          <div class="col-xs-12 post-links">
+            <span class="glyphicon glyphicon-comment g-links" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Reply"></span>
+            <span class="glyphicon glyphicon-retweet g-links" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Retweet"></span>
+            <span class="glyphicon glyphicon-heart g-links" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Like"></span>
+            <span class="glyphicon glyphicon-option-horizontal g-links" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="More"></span>
+          </div>
+          
         </div>
       </div>
+
     <% end %>
   </div>
   

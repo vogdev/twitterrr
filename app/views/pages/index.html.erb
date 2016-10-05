@@ -1,2 +1,79 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<% if !user_signed_in? %>
+<style>
+    body {
+        background: linear-gradient(
+        rgba(0,0,0, 0.6),
+        rgba(0,0,0, 0.6)
+        ), url("/bg.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        
+    }
+    .front-welcome-text h1 {
+        color: #fff;
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 44px;
+        margin-top: 20%;
+        margin-bottom: 30px;
+        text-shadow: none;
+    }
+    .front-welcome-text p {
+        color: #fff;
+        font-size: 21px;
+        line-height: 31px;
+        text-shadow: none;
+    }
+    .footer-liks {
+        text-align:center;
+        color:#FFFFFF;
+        margin-top:20%;
+    }
+    .container-index {
+        margin-right:15%;
+        margin-left:15%;
+    }
+    .log-in {
+        width:250px;
+        height:150px;
+        margin: 15px auto;
+    }
+    .log-up {
+        width:250px;
+        height:250px;
+        margin: 15px auto;
+    }
+    .log-in-up {
+        margin-top:10%;
+    }
+</style>
+<div class="container">
+    <div class="row">
+
+    <div class="col-md-6 front-welcome-text">
+        <h1 class="text-center">Welcome to Twitterrr.</h1>
+        <p>Connect with your friends — and other fascinating people. Get in-the-moment updates on the things that interest you. And watch events unfold, in real time, from every angle.</p>
+
+    </div>
+    <div class="col-md-6 log-in-up">
+        <div class="log-in panel">
+        
+        </div>
+        <div class="log-up panel">
+
+        </div>   
+            
+    </div>
+    <div class="col-sm-12">
+                <p class="footer-liks">
+                About Help Blog Status Jobs Terms Privacy Cookies Ads info Brand Advertise Businesses Media Developers Directory © 2016 Twitterrr
+            </p>
+    </div>
+    </div>
+</div>
+
+<% else %>
+<script>document.location = "/home"</script>
+<% end %>
